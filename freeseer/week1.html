@@ -1,0 +1,85 @@
+<!DOCTYPE html5>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text\html; charset=utf-8" />
+		<title>Freeseer Week1</title>
+		<link rel="shortcut icon" type="image/png" href="../favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="../css/basic.css" />
+		<link rel="stylesheet" type="text/css" href="../css/project.css" />
+	</head>
+	<body>
+		<div id="blogheadder">
+      <h1>Cryspia's Blog</h1>
+			<p class="directlink"><a href="../index.html">HOME</a></p>
+			<div class="clearfloat"></div>
+		</div>
+		<div id="pagedirect">
+			<p class="directlink leftlink emptylink">Earliest</p>
+			<p class="directlink"><a href="week2.html">Week 2</a></a></p>
+			<div class="clearfloat"></div>
+		</div>
+		<div id="blogbody">
+			<div id="inderbody">
+				<div id="sidebar">
+					<div id="sidebody">
+						<p><a href="#">^TOP^</a></p>
+						<p><a href="#h2n1">Works done in this week</a>
+						<ul>
+							<li><a href="#h2n1h3n1">Install freeseer under Ubuntu</a></li>
+							<li><a href="#h2n1h3n2">Try freeseer under Ubuntu</a></li>
+							<li><a href="#h2n1h3n3">Install freeseer under Windows8.1</a></li>
+							<li><a href="#h2n1h3n4">Try freeseer under Windows8.1</a></li>
+							<li><a href="#h2n1h3n5">Install the IRC client</a></li>
+							<li><a href="#h2n1h3n6">Read Python Style</a></li>
+						</ul></p>
+						<p><a href="#h2n2">Works plan to do</a></p>
+					</div>
+				</div>
+				<div id="mainbody">
+					<h2><span id="h2n1">Works done in this week</span></h2>
+					<h3><span id="h2n1h3n1">Install freeseer under Ubuntu</span></h3>
+					<div class="firstpara"><p>Since it is recommanded to install freeseer under Linux, I first tried to use Ubuntu. It was not difficult to 
+					get all the tools and environments setup under linux. However, I met some problem after finishing all the installations: I cannot 
+					successfully execute "freeseer-record". I tried a lot of times over again but still cannot solve the problem, so I post the problem to 
+					<a href="https://groups.google.com/forum/#!topic/freeseer/UQ-s0u-UHVI">Google Group</a>. Finally, I found the reason. It was caused by 
+					a python distribution (Anaconda) that I have installed. After removed the directory from .bashrc and reinstalled the environment again, I got 
+					everything work correctly.</p></div>
+					<h3><span id="h2n1h3n2">Try freeseer under Ubuntu</span></h3>
+					<p>My Ubuntu is installed in a virtual machine. As I result, I found freeseer cannot run correctly in the system. There was nothing wrong 
+					during the program is running, but the output files were broken. The ogg output contains only one frame with no sounds. Besides, if the program 
+					keeps capturing too long, it will crash. Since there are on others reporting that problem, I consider it the problem caused by the virtual 
+					machine. So I decided to setup the environment again under the main system in my computer, Windows.</p>
+					<h3><span id="h2n1h3n3">Install freeseer under Windows8.1</span></h3>
+					<p>The process under Windows was quite successful compared with that under Linux. Although a module called gst was said to be missing at the first 
+					running, I easily found that it was a problem caused by the gstreamer SDK and quickly solved that.</p>
+					<h3><span id="h2n1h3n4">Try freeseer under Windows8.1</span></h3>
+					<p>The general execution has not problem. However, some of the functions have some bugs according my test.
+					<ul>
+						<li>The language changing does not work (I found it <a href="https://github.com/Freeseer/freeseer/issues/476">issue#476</a>)</li>
+						<li>With the system display size over 100%, the font display in freeseer-config is borken like the picuture below.<br />
+						<img src="pic/week1_1.jpg" alt="font problem" /></li>
+						<li>There is no problem with the video captured by camera, but about the ones captured from desktop. The video is not fluent. There would be 
+						only one frame every 2 or 3 seconds (ogg output). I am not sure whether it is the problem of Windows, or the problem of the high resolution of 
+						my computer. I would tried to trace that problem in the future.</li>
+						<li>Desktop sounds cannot be recorded(It is not a bug actually, more like a function loss).</li>
+					</ul></p>
+					<h3><span id="h2n1h3n5">Install the IRC client</span></h3>
+					<p>The IRC client I installed is XChat under Linux. I have tried to link to the freeseer channel and succeeded.</p>
+					<h3><span id="h2n1h3n6">Read Python Style</span></h3>
+					<p>I read though the Python style guides offer in the freeseer homepage.</p>
+					<h2><span id="h2n2">Works plan to do</span></h2>
+					<p>After looking into the issues, I found myself interested in some of them, and some besides them.
+					<ul>
+						<li>#476. It is the bug of language changing.</li>
+						<li>#541. The resize problem. Maybe a easy one to get start.</li>
+						<li>The desktop recording problem that I have mentioned. Since I myself is really interested in the desktop recording things, I really hope 
+						the problem can be solved so that I can use freeseer for some daily work.</li>
+						<li>The desktop sound recording. Same reason as above.</li>
+					</ul></p>
+					<p>For the next week, I plan to start looking into the code of freeseer, and am excited about the travel to Toronto!</p>
+				</div>
+				<div class="clearfloat"></div>
+			</div>
+		</div>
+	</body>
+</html>

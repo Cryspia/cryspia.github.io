@@ -1,0 +1,92 @@
+body
+{
+	color: #111111;
+	background-image: url("../objects/bg.jpg");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+a:link
+{
+	color: #111111;
+	text-decoration:none;
+}
+
+a:hover
+{
+	text-decoration:underline;
+}
+
+a:visited
+{
+	color: #111111;
+}
+
+ul li
+{
+	list-style-type: circle;
+}
+
+#blogheadder
+{
+	background-color: #66CCFF;
+	width: 95%;
+	margin: 1.5em auto 0em;
+	border-radius: 1em;
+}
+
+#blogheadder h1
+{
+	color: #FF7F00;
+	padding: 0em 0em 0em 0.6em;
+	width: auto;
+	float: left;
+	clear: left;
+}
+
+.directlink
+{
+	background-color: #99997F;
+	font-weight: bold;
+	color: #222222;
+	border-style: outset;
+	border-color: #89896F;
+	padding: 0.1em 0.3em;
+	width: auto;
+	margin: 0.7em;
+	border-radius: 0.2em;
+	float: right;
+	clear: right;
+}
+
+.leftlink
+{
+	float: left;
+	clear: left;
+}
+
+.directlink a:visited
+{
+	color: #222222;
+}
+
+.clearfloat
+{
+	clear: both;
+}
+
+#blogbody
+{
+	background-color: #EEEEEE;
+	filter: alpha(Opacity=85);
+	opacity: 0.85;
+	width: 95%;
+	margin: 1.5em auto 0em;
+}
+
+#inderbody
+{
+	padding: 1em 1.5em;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html5>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text\html; charset=utf-8" />
+		<title>Freeseer Week2</title>
+		<link rel="shortcut icon" type="image/png" href="../favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="../css/basic.css" />
+		<link rel="stylesheet" type="text/css" href="../css/project.css" />
+	</head>
+	<body>
+		<div id="blogheadder">
+			<h1>Promm's Blog</h1>
+			<p class="directlink"><a href="../index.html">HOME</a></p>
+			<div class="clearfloat"></div>
+		</div>
+		<div id="pagedirect">
+			<p class="directlink leftlink"><a href="week1.html">Week 1</a></p>
+			<p class="directlink"><a href="week3.html">Week 3</a></p>
+			<div class="clearfloat"></div>
+		</div>
+		<div id="blogbody">
+			<div id="inderbody">
+				<div id="sidebar">
+					<div id="sidebody">
+						<p><a href="#">^TOP^</a></p>
+						<p><a href="#h2n1">Works done in this week</a>
+						<ul>
+							<li><a href="#h2n1h3n1">Finished Project Proposal</a></li>
+							<li><a href="#h2n1h3n2">Find bug (#581) and fix</a></li>
+							<li><a href="#h2n1h3n3">Find bug (#584) and fix</a></li>
+							<li><a href="#h2n1h3n4">New issue (#583) about translation rate</a></li>
+							<li><a href="#h2n1h3n5">Finished the Chinese translation</a></li>
+						</ul></p>
+						<p><a href="#h2n2">Works plan to do</a></p>
+					</div>
+				</div>
+				<div id="mainbody">
+					<h2><span id="h2n1">Works done in this week</span></h2>
+					<h3><span id="h2n1h3n1">Finished the <a href="https://docs.google.com/document/d/1j8EuCGMW1dvM0q_AP_0c3fAGHWS0iGW5EcS67HIbr_I/edit?usp=sharing">Project Proposal</a></span></h3>
+					<div class="firstpara"><p>According to the plan that I have made, I finished my project proposal. Since I am not very sure about the work load 
+					of the work as well as the difficulty, there could be variable changes done to that document later. I have made a basic schedule in that, and 
+					that can be changed according to my work process.</p></div>
+					<h3><span id="h2n1h3n2">Find bug (<a href="https://github.com/Freeseer/freeseer/issues/581">#581</a>) and pulled a fix</span></h3>
+					<p>It is a bug caused by typo in record.py, which used an non-existed variable 'starTime' (should be 'startTime'). 
+					The Report window under the Help menu cannot be opened because of that. A <a href="https://github.com/Freeseer/freeseer/pull/582">fix pull</a> 
+					has already been created. In this period, I also learnt the standard to create the branch and write the commit log in open source project.</p>
+					<h3><span id="h2n1h3n3">Find bug (<a href="https://github.com/Freeseer/freeseer/issues/584">#584</a>) and pulled a fix</span></h3>
+					<p>It is a bug that happened specifically on unicode languages (Japanese/日本語, Simplified Chinese/简体中文, and Traditional Chinese/繁體中文).
+					It is because that some ".format" methods in record.py has the ascii body but unicode input. This bug can be easily fixed by change the body 
+					also to unicode so that there will be no confliction. A <a href="https://github.com/Freeseer/freeseer/pull/585">fix pull</a> has already 
+					been created.</p>
+					<h3><span id="h2n1h3n4">Created a new issue (<a href="https://github.com/Freeseer/freeseer/issues/583">#583</a>) about the translation rate</span></h3>
+					<p>The translation is out of date since there are quite a lot new functions with new text. So the translation also needs update. 
+					Besides, some of the text is not yet added to the translation framework. This can also be considered as a bug.</p>
+					<h3><span id="h2n1h3n5">Finished the translation for Simplified Chinese and Traditional Chinese</span></h3>
+					<p>As described in the title. The translation rates for Chinese have been made 152/152. There are still some text in English after that, but 
+					that can be considered as framework problem. A <a href="https://github.com/Freeseer/freeseer/pull/587">pull request</a> has been created.</p>
+					<h2><span id="h2n2">Works plan to do</span></h2>
+					<p>According to schedule, I will look into the code to prepare for the auto-localization-changing according the system environment, there will 
+					be no pull request (though maybe some period work upload to new branch on github according to the work speed). Hopefully, all this work can be 
+					finished by week 4.</p>
+					<p>Beyond the schedule, I may keep looking for bugs and would try to solve them.</p>
+				</div>
+				<div class="clearfloat"></div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html5>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text\html; charset=utf-8" />
+		<title>Freeseer Week3</title>
+		<link rel="shortcut icon" type="image/png" href="../favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="../css/basic.css" />
+		<link rel="stylesheet" type="text/css" href="../css/project.css" />
+	</head>
+	<body>
+		<div id="blogheadder">
+			<h1>Cryspia's Blog</h1>
+			<p class="directlink"><a href="../index.html">HOME</a></p>
+			<div class="clearfloat"></div>
+		</div>
+		<div id="pagedirect">
+			<p class="directlink leftlink"><a href="week2.html">Week 2</a></p>
+			<p class="directlink"><a href="week4.html">Week 4</a</p>
+			<div class="clearfloat"></div>
+		</div>
+		<div id="blogbody">
+			<div id="inderbody">
+				<div id="sidebar">
+					<div id="sidebody">
+						<p><a href="#">^TOP^</a></p>
+						<p><a href="#h2n1">Works done in this week</a>
+						<ul>
+							<li><a href="#h2n1h3n1">Auto language changing</a></li>
+							<li><a href="#h2n1h3n2">PR problem fix</a></li>
+							<li><a href="#h2n1h3n3">Find bugs for new ConfigTool</a></li>
+							<li><a href="#h2n1h3n4">A suggestion for the language setting</a></li>
+						</ul></p>
+						<p><a href="#h2n2">Works plan to do</a></p>
+					</div>
+				</div>
+				<div id="mainbody">
+					<h2><span id="h2n1">Works done in this week</span></h2>
+					<h3><span id="h2n1h3n1">Read code and adding the auto language changing</span></h3>
+					<div class="firstpara"><p>According to the issue <a href="https://github.com/Freeseer/freeseer/issues/476">#476</a>, we need the UI language 
+					to be auto changing according to the user's system environment. I have finished reading the code and understand it. I can start adding this 
+					function at any time. But it seems that it auto language changing would have some conflicts with the default language in the user settings. 
+					So I have created a new issue for that (<a href="https://github.com/Freeseer/freeseer/issues/601">#601</a>).</p></div>
+					<h3><span id="h2n1h3n2">Fixed the problems in the PR last week</span></h3>
+					<p>Add some comments for PR <a href="https://github.com/Freeseer/freeseer/pull/585">#585</a> to explain the reason to fix this bug.<br/>
+					Since the framework has been updated, I also update the PR <a href="https://github.com/Freeseer/freeseer/pull/587">#587</a>.</p>
+					<h3><span id="h2n1h3n3">Find two bugs for the new ConfigTool framework.</span></h3>
+					<p>It seems that there are some problems with the new framework. I have reopened issue <a href="https://github.com/Freeseer/freeseer/issues/576">
+					#576</a> which is the font problem under Windows. This is seems to happen again in the new framework. I also opened a new issue 
+					<a href="https://github.com/Freeseer/freeseer/issues/602">#602</a>. It is a window size problem.</p>
+					<h3><span id="h2n1h3n4">A suggestion about the language menu and the default language setting</span></h3>
+					<p>The suggestion is created as issue <a href="https://github.com/Freeseer/freeseer/issues/600">#600</a>. I create this because I think 
+					the language menu and the language config are duplicated.</p>
+					<h2><span id="h2n2">Works plan to do</span></h2>
+					<p>If the auto language changing is still needed, I will add that function and create a pull request next week. If it is decided that it is 
+					not needed any more, I will start the plug-in things early. Also, I will keep looking for some bugs and try to fix some small ones.</p>
+				</div>
+				<div class="clearfloat"></div>
+			</div>
+		</div>
+	</body>
+</html>

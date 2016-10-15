@@ -1,0 +1,466 @@
+running test
+running egg_info
+writing freeseer.egg-info\PKG-INFO
+writing top-level names to freeseer.egg-info\top_level.txt
+writing dependency_links to freeseer.egg-info\dependency_links.txt
+writing entry points to freeseer.egg-info\entry_points.txt
+reading manifest file 'freeseer.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'freeseer.egg-info\SOURCES.txt'
+running build_ext
+============================= test session starts =============================
+platform win32 -- Python 2.7.8 -- py-1.4.24 -- pytest-2.5.2
+plugins: cov
+collected 233 items / 1 skipped
+
+freeseer/tests/framework/test_config.py .
+freeseer/tests/framework/test_database.py FF..F.......
+freeseer/tests/framework/test_multimedia.py .....
+freeseer/tests/framework/test_plugins.py ..F..
+freeseer/tests/framework/test_presentation.py ....
+freeseer/tests/framework/test_util.py ...
+freeseer/tests/framework/test_youtube.py .....
+freeseer/tests/framework/config/test_core.py ....................
+freeseer/tests/framework/config/test_profile.py ..........
+freeseer/tests/framework/config/options/test_boolean.py ................
+freeseer/tests/framework/config/options/test_choice.py ................
+freeseer/tests/framework/config/options/test_folder.py .F..F.F..........F..F.F.
+freeseer/tests/framework/config/options/test_integer.py ................
+freeseer/tests/framework/config/options/test_string.py ................
+freeseer/tests/framework/config/persist/test_configparser.py ..
+freeseer/tests/framework/config/persist/test_jsonstorage.py ..
+freeseer/tests/frontend/test_cli_talk.py F..
+freeseer/tests/frontend/configtool/test_config_tool.py ............
+freeseer/tests/frontend/controller/test_server.py ................................
+freeseer/tests/frontend/controller/test_validate.py ......
+freeseer/tests/frontend/record/test_record.py .....
+freeseer/tests/frontend/reporteditor/test_reporteditor.py ...
+freeseer/tests/frontend/talkeditor/test_talkeditor.py ..
+freeseer/tests/frontend/upload/test_youtube.py ..F.........
+freeseer/tests/plugins/importer/rss_feedparser/test_rss_feedparser.py x
+
+================================== FAILURES ===================================
+____________________ TestDatabase.test_add_talks_from_csv _____________________
+
+self = <freeseer.tests.framework.test_database.TestDatabase testMethod=test_add_talks_from_csv>
+
+    def test_add_talks_from_csv(self):
+        """Test that talks are retrieved from the CSV file"""
+    
+        fname = self._csvfile
+    
+        presentation = Presentation("Building NetBSD", "David Maxwell")
+    
+        self.db.add_talks_from_csv(fname)
+>       self.assertTrue(self.db.presentation_exists(presentation))
+E       AssertionError: False is not true
+
+freeseer\tests\framework\test_database.py:124: AssertionError
+------------------------------- Captured stderr -------------------------------
+2014-11-07 13:02:32,308 (   DEBUG) freeseer.framework.plugin               : Plugin manager initialized.\nQSqlDatabase: QSQLITE driver not loaded\nQSqlDatabase: available drivers: \nQSqlDatabase: an instance of QCoreApplication is required for loading driver plugins\n2014-11-07 13:02:32,309 (   ERROR) freeseer.framework.database             : Unable to create talkdb file.\nQSqlQuery::exec: database not open\n2014-11-07 13:02:32,312 (    INFO) freeseer.framework.database             : Talk added: Thanh Ha - Intro to Freeseer, Time:  - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:32,312 (    INFO) freeseer.framework.database             : Talk added: Chris Aniszczyk - Git at Eclipse.org: EGit, JGit and Gerrit, Time: 2011-08-22T15:52 - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:32,312 (    INFO) freeseer.framework.database             : Talk added: David Maxwell - Building NetBSD, Time: 2011-08-17T20:29 - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:32,312 (    INFO) freeseer.framework.database             : Talk added: Edward Ocampo-Gooding [@edwardog] - Explosions, fast cars, and hot, naked data: <3 from Open Data Ottawa, Time: None - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:32,312 (    INFO) freeseer.framework.database             : Talk added: Fred Dixon - Lecture Broadcast and Capture using BigBlueButton, Time: None - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:32,313 (    INFO) freeseer.framework.database             : Talk added: Fr\ufffd\ufffdd\ufffd\ufffdric Harper - Put the 5 in HTML, Time: 2011-08-19T10:21 - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:32,313 (    INFO) freeseer.framework.database             : Talk added: Patrick Naubert - The Architecture of IRCan's High Resiliency Environment, Time: None - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:32,313 (    INFO) freeseer.framework.database             : Talk added: Joseph Potvin, Coordinator, ERA-ART - What does the financial crisis have to do with software?, Time: None - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:32,315 (    INFO) freeseer.framework.database             : Talk added: Mike Brock - The power of code generation: Dependency Injection in the Browser, Time: 2011-08-27T11:00 - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:32,315 (    INFO) freeseer.framework.database             : Talk added: Michael Richardson - Test Driven Development web development with postgres or mysql., Time: None - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:32,315 (    INFO) freeseer.framework.database             : Talk added: Mekki MacAulay - Imploding vs. drifting apart: the shifting density of free/libre/open source communities, Time: None - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:32,315 (    INFO) freeseer.framework.database             : Talk added: Pascal St-Jean - Tiki Wiki CMS Groupware - Software the Wiki Way, Time: None - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:32,315 (    INFO) freeseer.framework.database             : Talk added: Richard Weait - Open Data - Successes, Pitfalls and Advocacy, Time: None - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:32,315 (    INFO) freeseer.framework.database             : Talk added: Richard Weait - OpenStreetMap - Location, Location, Location, Time: None - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:32,316 (    INFO) freeseer.framework.database             : Talk added: Steve Singer - PostgreSQL replication, Time: None - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:32,316 (    INFO) freeseer.framework.database             : Talk added: Tim Inkpen - Why We Need to Open-Source The Monetary System, Time: None - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:32,316 (    INFO) freeseer.framework.database             : Talk added: Yanick Champoux - Dancer: a Perl Micro Web Application Framework, Time: None - \nQSqlQuery::exec: database not open
+____________________ TestDatabase.test_add_talks_from_rss _____________________
+
+self = <freeseer.tests.framework.test_database.TestDatabase testMethod=test_add_talks_from_rss>
+
+    def test_add_talks_from_rss(self):
+        """Test that talks are retrieved from the RSS feed"""
+    
+        feed1 = "http://fosslc.org/drupal/presentations_rss/summercamp2010"
+        feed2 = "http://fosslc.org/drupal/presentations_rss/sc2011"
+    
+        presentation1 = Presentation("Managing map data in a database", "Andrew Ross")
+        presentation2 = Presentation("Building NetBSD", "David Maxwell")
+    
+        self.db.add_talks_from_rss(feed1)
+>       self.assertTrue(self.db.presentation_exists(presentation1))
+E       AssertionError: False is not true
+
+freeseer\tests\framework\test_database.py:111: AssertionError
+------------------------------- Captured stderr -------------------------------
+2014-11-07 13:02:32,503 (   DEBUG) freeseer.framework.plugin               : Plugin manager initialized.\nQSqlDatabase: QSQLITE driver not loaded\nQSqlDatabase: available drivers: \nQSqlDatabase: an instance of QCoreApplication is required for loading driver plugins\nQSqlDatabasePrivate::removeDatabase: connection 'qt_sql_default_connection' is still in use, all queries will cease to work.\nQSqlDatabasePrivate::addDatabase: duplicate connection name 'qt_sql_default_connection', old connection removed.\n2014-11-07 13:02:32,503 (   ERROR) freeseer.framework.database             : Unable to create talkdb file.\nQSqlQuery::exec: database not open\n2014-11-07 13:02:33,045 (    INFO) freeseer.framework.database             : Talk added: Andrew Ross - Managing map data in a database, Time: 2010-05-14T10:45 - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:33,045 (    INFO) freeseer.framework.database             : Talk added: Aaron Seigo - The KDE 4 Show: An Overview of Where the Free Software Desktop Is Going, Time: 2010-05-23T08:54 - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:33,046 (    INFO) freeseer.framework.database             : Talk added: Aaron Seigo - Managing a Meta-Project: A KDE Case Study, Time: 2010-05-15T22:21 - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:33,046 (    INFO) freeseer.framework.database             : Talk added: Dru Lavigne - Getting Started in an Open Source Community, Time: 2010-08-14T11:25 - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:33,046 (    INFO) freeseer.framework.database             : Talk added: David Maxwell - The NetBSD Way, Time: 2010-05-31T16:36 - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:33,046 (    INFO) freeseer.framework.database             : Talk added: David Maxwell - Software speaks - are you listening?, Time: 2010-05-31T17:12 - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:33,046 (    INFO) freeseer.framework.database             : Talk added: Doug Inkster - Ingres VectorWise - Database on Steroids, Time: None - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:33,046 (    INFO) freeseer.framework.database             : Talk added: Emma Jane Hogbin - Basic Design for Drupal, Time: 2010-08-14T13:33 - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:33,048 (    INFO) freeseer.framework.database             : Talk added: Geoff Zeiss - Open Web-searchable GeoData, Time: None - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:33,048 (    INFO) freeseer.framework.database             : Talk added: James Westby - Linaro: what is it, and why should it matter to you, Time: None - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:33,048 (    INFO) freeseer.framework.database             : Talk added: Mekki MacAulay - Every Eyeball Has Value!: The User as a Passive Participant in Open Source Ecosystems, Time: None - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:33,049 (    INFO) freeseer.framework.database             : Talk added: Pascal St-Jean - Wiki Based Collaborative Platform-Driven Applications By End-Users and Business Analysts, Time: None - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:33,049 (    INFO) freeseer.framework.database             : Talk added: Pete Forde - Data Literacy (or, how to save the world and get crazy rich at the same time), Time: 2010-06-26T09:53 - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:33,049 (    INFO) freeseer.framework.database             : Talk added: Russell McOrmond - Why legal protection for technical measures is controversial, Time: None - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:33,049 (    INFO) freeseer.framework.database             : Talk added: Rohit V Kapoor - SOA Wizardry with JBoss and Open Source Software, Time: None - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:33,049 (    INFO) freeseer.framework.database             : Talk added: Scott Chacon - Git 101, Time: 2010-08-14T13:50 - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:33,049 (    INFO) freeseer.framework.database             : Talk added: Shahzad Khan - Open Source Industrial Grade Search Engine Technologies, Time: None - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:33,051 (    INFO) freeseer.framework.database             : Talk added: Steve Singer - Introduction to OpenStreetMap, Time: None - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:33,051 (    INFO) freeseer.framework.database             : Talk added: Thomas Prowse - Commons Knowledge\u2122 - bringing clarity to the legal complexity of open source software licenses, Time: 2010-05-31T16:32 - \nQSqlQuery::exec: database not open\n2014-11-07 13:02:33,052 (    INFO) freeseer.framework.database             : Talk added: Wayne Beaton - Helios: The Eclipse Simultaneous Release, Time: None - \nQSqlQuery::exec: database not open
+_____________________ TestDatabase.test_get_presentation ______________________
+
+self = <freeseer.tests.framework.test_database.TestDatabase testMethod=test_get_presentation>
+
+    def test_get_presentation(self):
+        """Simply test that a presentation is returned"""
+>       self.assertIsInstance(self.db.get_presentation(1), Presentation)
+E       AssertionError: None is not an instance of <class 'freeseer.framework.presentation.Presentation'>
+
+freeseer\tests\framework\test_database.py:83: AssertionError
+------------------------------- Captured stderr -------------------------------
+2014-11-07 13:02:33,461 (   DEBUG) freeseer.framework.plugin               : Plugin manager initialized.
+QSqlDatabase: QSQLITE driver not loaded
+QSqlDatabase: available drivers: 
+QSqlDatabase: an instance of QCoreApplication is required for loading driver plugins
+QSqlDatabasePrivate::removeDatabase: connection 'qt_sql_default_connection' is still in use, all queries will cease to work.
+QSqlDatabasePrivate::addDatabase: duplicate connection name 'qt_sql_default_connection', old connection removed.
+2014-11-07 13:02:33,463 (   ERROR) freeseer.framework.database             : Unable to create talkdb file.
+QSqlQuery::exec: database not open
+_________________________ TestPlugins.test_output_bin _________________________
+
+self = <freeseer.tests.framework.test_plugins.TestPlugins testMethod=test_output_bin>
+
+    def test_output_bin(self):
+        '''Check that output plugins are returning a gst.Bin object
+    
+            Verifies that get_output_bin() is returning the proper object.
+            '''
+        plugins = self.plugman.get_plugins_of_category("Output")
+    
+        for plugin in plugins:
+            plugin.plugin_object.load_config(self.plugman)
+>           plugin_bin = plugin.plugin_object.get_output_bin()
+
+freeseer\tests\framework\test_plugins.py:122: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <yapsy_loaded_plugin_RTMP_Streaming_19.RTMPOutput object at 0x04A032F0>
+audio = True, video = True, metadata = None
+
+    def get_output_bin(self, audio=True, video=True, metadata=None):
+        bin = gst.Bin()
+    
+        if metadata is not None:
+            self.set_metadata(metadata)
+    
+        # Muxer
+        muxer = gst.element_factory_make("flvmux", "muxer")
+    
+        # Setup metadata
+        # set tag merge mode to GST_TAG_MERGE_REPLACE
+        merge_mode = gst.TagMergeMode.__enum_values__[2]
+    
+        if metadata is not None:
+            # Only set tag if metadata is set
+            muxer.merge_tags(self.tags, merge_mode)
+        muxer.set_tag_merge_mode(merge_mode)
+    
+        bin.add(muxer)
+    
+        # RTMP sink
+>       rtmpsink = gst.element_factory_make('rtmpsink', 'rtmpsink')
+E       ElementNotFoundError: rtmpsink
+
+freeseer\plugins\output\rtmp_streaming\__init__.py:184: ElementNotFoundError
+------------------------------- Captured stderr -------------------------------
+2014-11-07 13:02:35,911 (   DEBUG) freeseer.framework.plugin               : Plugin manager initialized.
+________________ TestFolderOptionNoDefault.test_decode_success ________________
+
+self = <freeseer.tests.framework.config.options.test_folder.TestFolderOptionNoDefault testMethod=test_decode_success>
+
+    def test_decode_success(self):
+        '''
+            Tests that decode succeeds in the correct scenarios.
+            '''
+        if not self.decode_success:
+            self.fail('missing decode successful values')
+        for in_value, out_value in self.decode_success:
+>           decoded = self.option.decode(in_value)
+
+freeseer\tests\framework\config\options\__init__.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <freeseer.framework.config.options.FolderOption object at 0x04D09290>
+value = '/tmp'
+
+    def decode(self, value):
+        if self.is_valid(value):
+            return value
+        else:
+>           raise InvalidDecodeValueError(value)
+E           InvalidDecodeValueError: Unable to decode value "/tmp"
+
+freeseer\framework\config\options.py:106: InvalidDecodeValueError
+________________ TestFolderOptionNoDefault.test_encode_success ________________
+
+self = <freeseer.tests.framework.config.options.test_folder.TestFolderOptionNoDefault testMethod=test_encode_success>
+
+    def test_encode_success(self):
+        '''
+            Tests that encode succeeds in the correct scenarios.
+            '''
+        if not self.encode_success:
+            self.fail('missing encode successful values')
+        for in_value, out_value in self.encode_success:
+>           self.assertTrue(self.option.is_valid(in_value))
+E           AssertionError: False is not true
+
+freeseer\tests\framework\config\options\__init__.py:79: AssertionError
+_______________ TestFolderOptionNoDefault.test_is_valid_success _______________
+
+self = <freeseer.tests.framework.config.options.test_folder.TestFolderOptionNoDefault testMethod=test_is_valid_success>
+
+    def test_is_valid_success(self):
+        '''
+            Tests that is_valid succeeds in the correct scenarios.
+            '''
+        if not self.valid_success:
+            self.fail('missing is_valid successful values')
+        for value in self.valid_success:
+>           self.assertTrue(self.option.is_valid(value))
+E           AssertionError: False is not true
+
+freeseer\tests\framework\config\options\__init__.py:63: AssertionError
+_______________ TestFolderOptionWithDefault.test_decode_success _______________
+
+self = <freeseer.tests.framework.config.options.test_folder.TestFolderOptionWithDefault testMethod=test_decode_success>
+
+    def test_decode_success(self):
+        '''
+            Tests that decode succeeds in the correct scenarios.
+            '''
+        if not self.decode_success:
+            self.fail('missing decode successful values')
+        for in_value, out_value in self.decode_success:
+>           decoded = self.option.decode(in_value)
+
+freeseer\tests\framework\config\options\__init__.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <freeseer.framework.config.options.FolderOption object at 0x04D17D30>
+value = '/tmp'
+
+    def decode(self, value):
+        if self.is_valid(value):
+            return value
+        else:
+>           raise InvalidDecodeValueError(value)
+E           InvalidDecodeValueError: Unable to decode value "/tmp"
+
+freeseer\framework\config\options.py:106: InvalidDecodeValueError
+_______________ TestFolderOptionWithDefault.test_encode_success _______________
+
+self = <freeseer.tests.framework.config.options.test_folder.TestFolderOptionWithDefault testMethod=test_encode_success>
+
+    def test_encode_success(self):
+        '''
+            Tests that encode succeeds in the correct scenarios.
+            '''
+        if not self.encode_success:
+            self.fail('missing encode successful values')
+        for in_value, out_value in self.encode_success:
+>           self.assertTrue(self.option.is_valid(in_value))
+E           AssertionError: False is not true
+
+freeseer\tests\framework\config\options\__init__.py:79: AssertionError
+______________ TestFolderOptionWithDefault.test_is_valid_success ______________
+
+self = <freeseer.tests.framework.config.options.test_folder.TestFolderOptionWithDefault testMethod=test_is_valid_success>
+
+    def test_is_valid_success(self):
+        '''
+            Tests that is_valid succeeds in the correct scenarios.
+            '''
+        if not self.valid_success:
+            self.fail('missing is_valid successful values')
+        for value in self.valid_success:
+>           self.assertTrue(self.option.is_valid(value))
+E           AssertionError: False is not true
+
+freeseer\tests\framework\config\options\__init__.py:63: AssertionError
+____________________________ TestCli.test_add_talk ____________________________
+
+args = (<freeseer.tests.frontend.test_cli_talk.TestCli testMethod=test_add_talk>, <MagicMock name='get_database' id='81506992'>)
+keywargs = {}, extra_args = [<MagicMock name='get_database' id='81506992'>]
+entered_patchers = [<mock._patch object at 0x041CE210>]
+exc_info = (<type 'exceptions.AssertionError'>, AssertionError("PyQt4.QtCore.QString(u'') != u'test title'",), <traceback object at 0x04DC2B48>)
+patching = <mock._patch object at 0x041CE210>
+arg = <MagicMock name='get_database' id='81506992'>
+
+    @wraps(func)
+    def patched(*args, **keywargs):
+        # don't use a with here (backwards compatability with Python 2.4)
+        extra_args = []
+        entered_patchers = []
+    
+        # can't use try...except...finally because of Python 2.4
+        # compatibility
+        exc_info = tuple()
+        try:
+            try:
+                for patching in patched.patchings:
+                    arg = patching.__enter__()
+                    entered_patchers.append(patching)
+                    if patching.attribute_name is not None:
+                        keywargs.update(arg)
+                    elif patching.new is DEFAULT:
+                        extra_args.append(arg)
+    
+                args += tuple(extra_args)
+>               return func(*args, **keywargs)
+
+d:\Python27\lib\site-packages\mock.py:1201: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <freeseer.tests.frontend.test_cli_talk.TestCli testMethod=test_add_talk>
+mock_profile = <MagicMock name='get_database' id='81506992'>
+
+    @patch.object(Profile, 'get_database')
+    def test_add_talk(self, mock_profile):
+        """Test adding a talk"""
+        mock_profile.return_value = self.db
+        args = shlex.split('talk add -t "test title" -s "john doe" -e testing -r rm123')
+        sys.argv[1:] = args
+        cli.parse_args(self.parser, args)
+        talks = self.db.get_talks()
+        talks.next()  # Point to talk data
+        talks.next()  # Skip default blank entry
+        talks.next()  # Skip first test entry
+        talks.next()  # Skip second test entry
+        record = talks.record()
+    
+>       self.assertEqual(talks.value(record.indexOf('title')).toString(), u'test title')
+E       AssertionError: PyQt4.QtCore.QString(u'') != u'test title'
+
+freeseer\tests\frontend\test_cli_talk.py:72: AssertionError
+------------------------------- Captured stderr -------------------------------
+2014-11-07 13:02:37,099 (   DEBUG) freeseer.framework.plugin               : Plugin manager initialized.
+QSqlDatabase: QSQLITE driver not loaded
+QSqlDatabase: available drivers: 
+QSqlDatabase: an instance of QCoreApplication is required for loading driver plugins
+QSqlDatabasePrivate::removeDatabase: connection 'qt_sql_default_connection' is still in use, all queries will cease to work.
+QSqlDatabasePrivate::addDatabase: duplicate connection name 'qt_sql_default_connection', old connection removed.
+2014-11-07 13:02:37,099 (   ERROR) freeseer.framework.database             : Unable to create talkdb file.
+QSqlQuery::exec: database not open
+2014-11-07 13:02:37,101 (    INFO) freeseer.framework.database             : Talk added: test speaker - test title 1, Time:  - 
+QSqlQuery::exec: database not open
+2014-11-07 13:02:37,101 (    INFO) freeseer.framework.database             : Talk added: test speaker - test title 2, Time:  - 
+QSqlQuery::exec: database not open
+2014-11-07 13:02:37,105 (    INFO) freeseer.framework.database             : Talk added: john doe - test title, Time:  - 
+QSqlQuery::exec: database not open
+QSqlQuery::value: not positioned on a valid record
+____________________ TestYoutubeFrontend.test_get_defaults ____________________
+
+self = <freeseer.tests.frontend.upload.test_youtube.TestYoutubeFrontend testMethod=test_get_defaults>
+
+    def test_get_defaults(self):
+        """Test get_defaults, should always return a dict"""
+        home = os.getenv('HOME')
+        expected = {
+            'client_secrets': '{}/.freeseer/client_secrets.json'.format(home),
+            'video_directory': '{}/Videos'.format(home),
+            'oauth2_token': '{}/.freeseer/oauth2_token.json'.format(home)
+        }
+        actual = youtube.get_defaults()
+>       self.assertDictEqual(actual, expected)
+E       AssertionError: {'client_secrets': 'c:\\Users\\Azure\\.freeseer\\client_secrets.json', 'video_di [truncated]... != {'client_secrets': 'c:/Users/Azure/.freeseer/client_secrets.json', 'video_direct [truncated]...
+E       - {'client_secrets': 'c:\\Users\\Azure\\.freeseer\\client_secrets.json',
+E       ?                       ^^     ^^     ^^         ^^
+E       
+E       + {'client_secrets': 'c:/Users/Azure/.freeseer/client_secrets.json',
+E       ?                       ^     ^     ^         ^
+E       
+E       -  'oauth2_token': 'c:\\Users\\Azure\\.freeseer\\oauth2_token.json',
+E       ?                     ^^     ^^     ^^         ^^
+E       
+E       +  'oauth2_token': 'c:/Users/Azure/.freeseer/oauth2_token.json',
+E       ?                     ^     ^     ^         ^
+E       
+E          'video_directory': 'c:/Users/Azure/Videos'}
+
+freeseer\tests\frontend\upload\test_youtube.py:57: AssertionError
+--------------- coverage: platform win32, python 2.7.8-final-0 ----------------
+Name                                                    Stmts   Miss  Cover
+---------------------------------------------------------------------------
+freeseer\__init__                                          33     33     0%
+freeseer\__main__                                           2      2     0%
+freeseer\framework\__init__                                 0      0   100%
+freeseer\framework\area_selector                           89     66    26%
+freeseer\framework\config\__init__                          1      1     0%
+freeseer\framework\config\core                             80     38    53%
+freeseer\framework\config\exceptions                       16     12    25%
+freeseer\framework\config\options                          66     34    48%
+freeseer\framework\config\persist\__init__                  2      2     0%
+freeseer\framework\config\persist\configparser             23      5    78%
+freeseer\framework\config\persist\jsonstorage              30      8    73%
+freeseer\framework\config\profile                          52     18    65%
+freeseer\framework\database                               234    166    29%
+freeseer\framework\failure                                 10     10     0%
+freeseer\framework\multimedia                             233     49    79%
+freeseer\framework\plugin                                 183    130    29%
+freeseer\framework\presentation                            24     15    38%
+freeseer\framework\qt_key_grabber                          52     52     0%
+freeseer\framework\util                                    70     10    86%
+freeseer\framework\youtube                                 80     41    49%
+freeseer\frontend\__init__                                  0      0   100%
+freeseer\frontend\cli                                     183     94    49%
+freeseer\frontend\configtool\AVWidget                     114      5    96%
+freeseer\frontend\configtool\ConfigToolWidget              42      7    83%
+freeseer\frontend\configtool\GeneralWidget                 61      5    92%
+freeseer\frontend\configtool\PluginWidget                  67     21    69%
+freeseer\frontend\configtool\__init__                       0      0   100%
+freeseer\frontend\configtool\configtool                   352    113    68%
+freeseer\frontend\controller\__init__                       4      0   100%
+freeseer\frontend\controller\recording                    122     16    87%
+freeseer\frontend\controller\server                        28      3    89%
+freeseer\frontend\controller\validate                      20      1    95%
+freeseer\frontend\qtcommon\AboutDialog                     33      2    94%
+freeseer\frontend\qtcommon\AboutWidget                     89     14    84%
+freeseer\frontend\qtcommon\FreeseerApp                    111      5    95%
+freeseer\frontend\qtcommon\__init__                         0      0   100%
+freeseer\frontend\qtcommon\resource                         9      1    89%
+freeseer\frontend\record\AutoRecordWidget                  82     33    60%
+freeseer\frontend\record\RecordingController               44     25    43%
+freeseer\frontend\record\RecordingWidget                  146     10    93%
+freeseer\frontend\record\ReportDialog                      74      2    97%
+freeseer\frontend\record\__init__                           0      0   100%
+freeseer\frontend\record\record                           467    237    49%
+freeseer\frontend\reporteditor\ReportEditorWidget          73      5    93%
+freeseer\frontend\reporteditor\__init__                     0      0   100%
+freeseer\frontend\reporteditor\reporteditor               135     49    64%
+freeseer\frontend\talkeditor\CommandButtons                48      6    88%
+freeseer\frontend\talkeditor\ImportTalksWidget             58      6    90%
+freeseer\frontend\talkeditor\NewTalkWidget                 28      0   100%
+freeseer\frontend\talkeditor\TalkDetailsWidget            107      6    94%
+freeseer\frontend\talkeditor\__init__                       0      0   100%
+freeseer\frontend\talkeditor\talkeditor                   372    161    57%
+freeseer\frontend\upload\__init__                           0      0   100%
+freeseer\frontend\upload\youtube                           51     15    71%
+freeseer\plugins\__init__                                   0      0   100%
+freeseer\plugins\audioinput\__init__                        0      0   100%
+freeseer\plugins\audioinput\alsasrc\__init__               16      7    56%
+freeseer\plugins\audioinput\audiotestsrc\__init__          16      0   100%
+freeseer\plugins\audioinput\autoaudiosrc\__init__          16      0   100%
+freeseer\plugins\audioinput\jackaudiosrc\__init__          59     32    46%
+freeseer\plugins\audioinput\jackaudiosrc\widget            22     15    32%
+freeseer\plugins\audioinput\pulsesrc\__init__              53     30    43%
+freeseer\plugins\audioinput\pulsesrc\widget                15      7    53%
+freeseer\plugins\audiomixer\__init__                        0      0   100%
+freeseer\plugins\audiomixer\audiopassthrough\__init__      68     29    57%
+freeseer\plugins\audiomixer\audiopassthrough\widget        33     20    39%
+freeseer\plugins\audiomixer\multiaudio\__init__            96     54    44%
+freeseer\plugins\audiomixer\multiaudio\widget              46     34    26%
+freeseer\plugins\importer\__init__                          0      0   100%
+freeseer\plugins\importer\csv_importer                     19      2    89%
+freeseer\plugins\importer\rss_feedparser\__init__          37      0   100%
+freeseer\plugins\output\__init__                            0      0   100%
+freeseer\plugins\output\audiofeedback\__init__             43     11    74%
+freeseer\plugins\output\audiofeedback\widget               15      8    47%
+freeseer\plugins\output\ogg_icecast\__init__              104     73    30%
+freeseer\plugins\output\ogg_icecast\widget                 25     17    32%
+freeseer\plugins\output\ogg_output\__init__               103     23    78%
+freeseer\plugins\output\ogg_output\widget                  30     21    30%
+freeseer\plugins\output\raw_output\__init__                44      0   100%
+freeseer\plugins\output\rtmp_streaming\__init__           383    290    24%
+freeseer\plugins\output\videopreview\__init__              57     18    68%
+freeseer\plugins\output\videopreview\widget                20     13    35%
+freeseer\plugins\output\webm_output\__init__               63     49    22%
+freeseer\plugins\videoinput\__init__                        0      0   100%
+freeseer\plugins\videoinput\desktop\__init__              101     52    49%
+freeseer\plugins\videoinput\desktop\widget                 26     16    38%
+freeseer\plugins\videoinput\firewiresrc\__init__           66     42    36%
+freeseer\plugins\videoinput\firewiresrc\widget             14      7    50%
+freeseer\plugins\videoinput\usbsrc\__init__                71     33    54%
+freeseer\plugins\videoinput\usbsrc\widget                  14      7    50%
+freeseer\plugins\videoinput\videotestsrc\__init__          51     19    63%
+freeseer\plugins\videoinput\videotestsrc\widget            22     13    41%
+freeseer\plugins\videomixer\__init__                        0      0   100%
+freeseer\plugins\videomixer\pip\__init__                  128     73    43%
+freeseer\plugins\videomixer\pip\widget                     44     32    27%
+freeseer\plugins\videomixer\videopassthrough\__init__     115     52    55%
+freeseer\plugins\videomixer\videopassthrough\widget        60     43    28%
+freeseer\settings                                          22     22     0%
+---------------------------------------------------------------------------
+TOTAL                                                    6317   2698    57%
+======== 12 failed, 220 passed, 1 skipped, 1 xfailed in 19.73 seconds =========

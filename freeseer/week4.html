@@ -1,0 +1,64 @@
+<!DOCTYPE html5>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text\html; charset=utf-8" />
+		<title>Freeseer Week4</title>
+		<link rel="shortcut icon" type="image/png" href="../favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="../css/basic.css" />
+		<link rel="stylesheet" type="text/css" href="../css/project.css" />
+	</head>
+	<body>
+		<div id="blogheadder">
+			<h1>Cryspia's Blog</h1>
+			<p class="directlink"><a href="../index.html">HOME</a></p>
+			<div class="clearfloat"></div>
+		</div>
+		<div id="pagedirect">
+			<p class="directlink leftlink"><a href="week3.html">Week 3</a></p>
+			<p class="directlink"><a href="week5.html">Week 5</a></p>
+			<div class="clearfloat"></div>
+		</div>
+		<div id="blogbody">
+			<div id="inderbody">
+				<div id="sidebar">
+					<div id="sidebody">
+						<p><a href="#">^TOP^</a></p>
+						<p><a href="#h2n1">Works done in this week</a>
+						<ul>
+							<li><a href="#h2n1h3n1">Auto Language Changing</a></li>
+							<li><a href="#h2n1h3n2">Resolution Changing</a></li>
+							<li><a href="#h2n1h3n3">Research on Low FPS Problem</a></li>
+							<li><a href="#h2n1h3n4">Find bug about Region Record</a></li>
+						</ul></p>
+						<p><a href="#h2n2">Works plan to do</a></p>
+					</div>
+				</div>
+				<div id="mainbody">
+					<h2><span id="h2n1">Works done in this week</span></h2>
+					<h3><span id="h2n1h3n1">Finished the Auto Language Function</span></h3>
+					<div class="firstpara"><p>The Auto language Function, which is mentioned in issue <a href="https://github.com/Freeseer/freeseer/issues/476">
+					#476</a> has been finished. A pull request <a href="https://github.com/Freeseer/freeseer/pull/609">#609</a> has been created. The designing 
+					details is discussed in issue <a href="https://github.com/Freeseer/freeseer/issues/601">#601</a>. There could be some further requirement 
+					in pull request.</p></div>
+					<h3><span id="h2n1h3n2">Finished a Test Version of Resolution Changing Function</span></h3>
+					<p>The is an API in the video mixer plug-in but not really in function. I am planing to make it functional according to my project proposal. 
+					I created an issue <a href="https://github.com/Freeseer/freeseer/issues/614">#614</a> related to this and have pushed a test version of the 
+					resolution changing feature <a href="https://github.com/Freeseer/freeseer/pull/615">#615</a>. The feature is not totally finished yet. Hopefully, 
+					I will finish the feature as well as the pull request next week.</p>
+					<h3><span id="h2n1h3n3">Research on the Low FPS Problem</span></h3>
+					<p>The desktop capture keeps getting low FPS when output. Since I can resize the output video via the new function, I did a simple research 
+					on the reason of getting that low FPS. The goal is to make sure whether that problem can be improved in my ability. The result is posted as 
+					issue <a href="https://github.com/Freeseer/freeseer/issues/616">#616</a>.</p>
+					<h3><span id="h2n1h3n4">Find a Bug about Record Region on Windows</span></h3>
+					<p>On Windows, the user can choose a region as the desktop capture source, but that region is not really captured (still full screen capture). 
+					The bug is posted <a href="https://github.com/Freeseer/freeseer/issues/617">#617</a></p>
+					<h2><span id="h2n2">Works plan to do</span></h2>
+					<p>In next week, I will modify my project proposal according to Machael's suggestions and my research result. For the work things, I will first 
+					try to finish the resolution function (If there are some additional requirements on that function, I may spend half more week.) If I still have 
+					time after that, I will do a further research on the low fps problem and see if I can solve it.</p>
+				</div>
+				<div class="clearfloat"></div>
+			</div>
+		</div>
+	</body>
+</html>

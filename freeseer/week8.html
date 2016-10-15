@@ -1,0 +1,68 @@
+<!DOCTYPE html5>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text\html; charset=utf-8" />
+		<title>Freeseer Week8</title>
+		<link rel="shortcut icon" type="image/png" href="../favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="../css/basic.css" />
+		<link rel="stylesheet" type="text/css" href="../css/project.css" />
+	</head>
+	<body>
+		<div id="blogheadder">
+			<h1>Cryspia's Blog</h1>
+			<p class="directlink"><a href="../index.html">HOME</a></p>
+			<div class="clearfloat"></div>
+		</div>
+		<div id="pagedirect">
+			<p class="directlink leftlink"><a href="week7.html">Week 7</a></p>
+			<p class="directlink"><a href="week9.html">Week 9</a></p>
+			<div class="clearfloat"></div>
+		</div>
+		<div id="blogbody">
+			<div id="inderbody">
+				<div id="sidebar">
+					<div id="sidebody">
+						<p><a href="#">^TOP^</a></p>
+						<p><a href="#h2n1">Works done in this week</a>
+						<ul>
+							<li><a href="#h2n1h3n1">Fix the PRs</a></li>
+							<li><a href="#h2n1h3n2">dshowaudiosrc plugin</a></li>
+							<li><a href="#h2n1h3n3">Bug fixing</a></li>
+							<li><a href="#h2n1h343">DPI adapting UI</a></li>
+						</ul></p>
+						<p><a href="#h2n2">Works plan to do</a></p>
+					</div>
+				</div>
+				<div id="mainbody">
+					<h2><span id="h2n1">Works done in this week</span></h2>
+					<h3><span id="h2n1h3n1">Fix the PRs</span></span></h3>
+					<div class="firstpara"><p>Fix problems in PR <a href="https://github.com/Freeseer/freeseer/pull/609">#609</a> and 
+					PR <a href="https://github.com/Freeseer/freeseer/pull/615">#615</a> according to Code Review. For the PR 
+					<a href="https://github.com/Freeseer/freeseer/pull/615">#615</a>, we still need a discussion of where to place 
+					the resolution map dictionary.</p></div>
+					<h3><span id="h2n1h3n2"></span>dshowaudiosrc plugin problem solving</h3>
+					<p>The dshowaudiosrc plugin is the one that I found could be useful for Windows Desktop Audio Capture function 
+					(issue <a href="https://github.com/Freeseer/freeseer/issues/633">#633</a>). There is some bugs in the property 
+					assignment of the plugin and I cannot solve it. So I sent emails to the plugin developer and the gstreamer dev 
+					mailing list. But I haven't get any reply yet. If there is still no reply, I would give up this feature.</p>
+					<h3><span id="h2n1h3n3">Small bugs fixing</span></h3>
+					<p>I rewrote the description for PR <a href="https://github.com/Freeseer/freeseer/pull/639">#639</a> to explain 
+					why the change will fix the bug. Also, I finished a new fix at PR <a href="https://github.com/Freeseer/freeseer/pull/641">
+					#641</a>. This fix will add a function that the "Record Region" button will be auto checked if the user presses 
+					"Select Region" and confirm the region selected in Desktop Record.</p>
+					<h3><span id="h2n1h3n4">Improvement on DPI adapting UI</span></h3>
+					<p>I built some new classes as the interlayer between QtGui classes and the widgets in freeseer. In those classes, 
+					I change the fixed size methods to DPI adatping versions. It is a bit hard to build the interlayer because the source 
+					code is written in C++ so there are methods with same name but different arguments. That is not supported 
+					in python so I need to deal with the situation by my own. Luckily, I solved it finally. If there is no better suggestion on 
+					how to do the DPI adapting UI besides the interlayer way, I will continue my methods next week. The posts can be seen 
+					in PR <a href="https://github.com/Freeseer/freeseer/pull/640">#640</a></p>
+					<h2><span id="h2n2">Works plan to do</span></h2>
+					<p>I would continue my work on DPI adapting UI next week. Hopefully, I can finish the code and make it ready for code 
+					review.</p>
+				</div>
+				<div class="clearfloat"></div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html5>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text\html; charset=utf-8" />
+		<title>Freeseer Week5</title>
+		<link rel="shortcut icon" type="image/png" href="../favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="../css/basic.css" />
+		<link rel="stylesheet" type="text/css" href="../css/project.css" />
+	</head>
+	<body>
+		<div id="blogheadder">
+			<h1>Cryspia's Blog</h1>
+			<p class="directlink"><a href="../index.html">HOME</a></p>
+			<div class="clearfloat"></div>
+		</div>
+		<div id="pagedirect">
+			<p class="directlink leftlink"><a href="week4.html">Week 4</a></p>
+			<p class="directlink"><a href="week6.html">Week 6</a></p>
+			<div class="clearfloat"></div>
+		</div>
+		<div id="blogbody">
+			<div id="inderbody">
+				<div id="sidebar">
+					<div id="sidebody">
+						<p><a href="#">^TOP^</a></p>
+						<p><a href="#h2n1">Works done in this week</a>
+						<ul>
+							<li><a href="#h2n1h3n1">Modify the PRs</a></li>
+							<li><a href="#h2n1h3n2">Find a new bug</a></li>
+							<li><a href="#h2n1h3n3">Research on Low FPS Problem</a></li>
+							<li><a href="#h2n1h3n4">Modify the Project Proposal</a></li>
+							<li><a href="#h2n1h3n5">Preparing for the new plugin</a></li>
+						</ul></p>
+						<p><a href="#h2n2">Works plan to do</a></p>
+					</div>
+				</div>
+				<div id="mainbody">
+					<h2><span id="h2n1">Works done in this week</span></h2>
+					<h3><span id="h2n1h3n1">Modify the PRs</span></span></h3>
+					<div class="firstpara"><p>Change the code for PR <a href="https://github.com/Freeseer/freeseer/pull/609">#609</a> and 
+					PR <a href="https://github.com/Freeseer/freeseer/pull/615">#615</a> according to the comments. Now the next step of #609 still 
+					needs discussion, but the main function of both are already finished.</p></div>
+					<h3><span id="h2n1h3n2"></span>Find a new bug about unchecking the input source</h3>
+					<p>The issue is already created as issue <a href="https://github.com/Freeseer/freeseer/issues/628">#628</a> it happens when record the 
+					videos without an audio input.</p>
+					<h3><span id="h2n1h3n3">Continue research on the Low FPS Problem</span></h3>
+					<p>I found that when output resolution is too high, the output file cannot be played regardless of the input size. I am still not sure 
+					whether it can be a bug or a gstreamer plugin problem (if latter, it may be hard to solve). I will look into that problem if I have time next 
+					week. The case is commented in PR <a href="https://github.com/Freeseer/freeseer/pull/615">#615</a></p>
+					<h3><span id="h2n1h3n4">Modify the <a href="https://docs.google.com/document/d/1j8EuCGMW1dvM0q_AP_0c3fAGHWS0iGW5EcS67HIbr_I/edit?usp=sharing">Project Proposal</a></span></h3>
+					<p>Change the weekly plan in the proposal according the comment by the mentors. Since the work amount seems not enough, more suggestions 
+					on work that I can do are needed. I left the weeks TBD in the proposal.</p>
+					<h3><span id="h2n1h3n5">Look for documents for Windows Desktop Audio Capture plugin</span></h3>
+					<p>Since there is no plugin that can help capture audio in Windows, I am planing to make a new one. Thanks for <B>zxiiro</B> for help me 
+					find the documents so that it is much easier to start. I will start working on it next week.</p>
+					<h2><span id="h2n2">Works plan to do</span></h2>
+					<p>In next week, I will try to finish the code review for the existing 2 PRs. Besides, I will create a new PR for the Windows Desktop 
+					Audio Capture plugin and upload a test version of it (Maybe a review version according to the difficulty of this job). Also, I will continue 					
+					modify the proposal for the work to do. If I still have time, I will look into the bugs that I have created to see if I can solve some 
+					of them.</p>
+				</div>
+				<div class="clearfloat"></div>
+			</div>
+		</div>
+	</body>
+</html>
